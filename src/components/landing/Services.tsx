@@ -1,75 +1,56 @@
-import { Droplets, Wrench, Home, CheckCircle, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Search, Construction, Drill, Droplets } from "lucide-react";
 
 const services = [
   {
-    icon: Wrench,
-    title: "Full Pipe Replacement",
-    description: "Complete removal of corroded galvanized pipes and installation of modern copper or PEX piping throughout your home.",
-    features: ["Whole-house repiping", "Minimal wall damage", "Code compliant"],
+    title: "Electronic Leak Detection",
+    description: "We use advanced acoustic and thermal imaging technology to pinpoint the exact location of your slab leak without damaging your floors.",
+    icon: Search,
   },
   {
+    title: "Minimally Invasive Repair",
+    description: "Our direct access repairs involve precise concrete cutting, repairing the specific pipe section, and restoring the concrete surface perfectly.",
+    icon: Drill,
+  },
+  {
+    title: "Pipe Rerouting",
+    description: "Sometimes the best solution is to reroute the plumbing through the ceiling or walls, eliminating the need to break the slab entirely.",
+    icon: Construction,
+  },
+  {
+    title: "Water Damage Mitigation",
+    description: "Leak under your foundation? We assess moisture levels and help dry out the affected areas to prevent mold execution.",
     icon: Droplets,
-    title: "Water Line Repair",
-    description: "Restore water pressure and quality by replacing damaged sections of galvanized piping with durable alternatives.",
-    features: ["Pressure restoration", "Leak elimination", "Water quality improvement"],
-  },
-  {
-    icon: Home,
-    title: "Inspection & Assessment",
-    description: "Comprehensive evaluation of your plumbing system to identify corrosion, blockages, and replacement needs.",
-    features: ["Camera inspection", "Written report", "Cost estimate"],
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-cream">
+    <section className="py-20 bg-slate-50" id="services">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-4 py-2 bg-copper/10 rounded-full text-copper text-sm font-semibold mb-4">
-            Our Services
-          </span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Expert Galvanized Pipe Solutions in Akron
+          <span className="text-blue-600 font-semibold mb-2 block uppercase tracking-wider">Our Services</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
+            Comprehensive Slab Leak Solutions
           </h2>
-          <p className="text-muted-foreground text-lg">
-            From inspection to complete replacement, we handle every aspect of your galvanized pipe problems with precision and care.
+          <p className="text-slate-600">
+            From detection to restoration, we handle every aspect of your slab leak problem with precision and care.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-card rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-hero flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-8 h-8 text-primary-foreground" />
-              </div>
-              
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                {service.title} in Akron
-              </h3>
-              
-              <p className="text-muted-foreground mb-6">
-                {service.description}
-              </p>
-              
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                    <CheckCircle className="w-4 h-4 text-copper" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <Button variant="ghost" className="group/btn text-copper hover:text-copper p-0">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
-            </div>
+            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader className="space-y-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <service.icon className="w-6 h-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">{service.description}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

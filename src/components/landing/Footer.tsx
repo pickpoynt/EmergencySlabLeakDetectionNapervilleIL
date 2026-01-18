@@ -1,104 +1,57 @@
-import { Phone, Mail, MapPin } from "lucide-react";
-
 const Footer = () => {
   return (
-    <footer className="bg-navy py-16">
+    <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-copper flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-lg">GP</span>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-white w-5 h-5"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
               </div>
-              <div>
-                <h3 className="font-heading font-bold text-lg text-primary-foreground leading-tight">
-                  Akron Pipe Pros
-                </h3>
-                <p className="text-xs text-primary-foreground/60">Galvanized Pipe Specialists</p>
-              </div>
+              <span className="text-xl font-bold">PickPoynt Slab Leak</span>
             </div>
-            <p className="text-primary-foreground/70 mb-6 max-w-md">
-              Summit County's trusted experts for galvanized pipe replacement. 
-              Family-owned since 1985, serving Akron and surrounding communities.
+            <p className="text-slate-400 max-w-sm">
+              Your trusted partner for non-invasive slab leak detection and repair in Naperville and DuPage County.
+              Preserving your home's foundation with 24/7 expert service.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="tel:+18777921410"
-                className="flex items-center gap-2 text-copper-light hover:text-copper transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                (877) 792-1410
-              </a>
-            </div>
           </div>
 
-          {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold text-primary-foreground mb-4">Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-copper-light transition-colors">
-                  Pipe Replacement
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-copper-light transition-colors">
-                  Water Line Repair
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-copper-light transition-colors">
-                  Pipe Inspection
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-copper-light transition-colors">
-                  Emergency Service
-                </a>
-              </li>
+            <h4 className="font-bold mb-4">Services</h4>
+            <ul className="space-y-2 text-slate-400">
+              <li>Electronic Leak Detection</li>
+              <li>Foundation Repair</li>
+              <li>Pipe Rerouting</li>
+              <li>Water Damage Restoration</li>
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-primary-foreground mb-4">Contact</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-primary-foreground/70">
-                <MapPin className="w-4 h-4 mt-1 text-copper-light" />
-                <span>Serving Akron, OH & Summit County</span>
-              </li>
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <Phone className="w-4 h-4 text-copper-light" />
-                <a href="tel:+18777921410" className="hover:text-copper-light transition-colors">
-                  (877) 792-1410
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <Mail className="w-4 h-4 text-copper-light" />
-                <a href="mailto:info@akronpipepros.com" className="hover:text-copper-light transition-colors">
-                  info@akronpipepros.com
-                </a>
-              </li>
+            <h4 className="font-bold mb-4">Contact</h4>
+            <ul className="space-y-2 text-slate-400">
+              <li>Naperville, IL</li>
+              <li>DuPage County</li>
+              <li>(877) 792-1410</li>
+              <li>info@pickpoynt.com</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} Akron Pipe Pros. All rights reserved.
-          </p>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-primary-foreground/50 hover:text-copper-light transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-primary-foreground/50 hover:text-copper-light transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-primary-foreground/50 hover:text-copper-light transition-colors">
-              Sitemap
-            </a>
-          </div>
+        <div className="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+          &copy; {new Date().getFullYear()} PickPoynt. All rights reserved.
         </div>
       </div>
     </footer>
