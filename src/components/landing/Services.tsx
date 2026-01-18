@@ -26,14 +26,14 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20 bg-slate-50" id="services">
+    <section className="py-20 bg-cream" id="services">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-blue-600 font-semibold mb-2 block uppercase tracking-wider">Our Services</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
+          <span className="text-copper font-semibold mb-2 block uppercase tracking-wider">Our Services</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
             Comprehensive Slab Leak Solutions
           </h2>
-          <p className="text-slate-600">
+          <p className="text-muted-foreground">
             From detection to restoration, we handle every aspect of your slab leak problem with precision and care.
           </p>
         </div>
@@ -42,13 +42,13 @@ const Services = () => {
           {services.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="space-y-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <service.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-copper/10 rounded-lg flex items-center justify-center">
+                  <service.icon className="w-6 h-6 text-copper" />
                 </div>
-                <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-bold font-heading">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600">{service.description}</p>
+                <p className="text-muted-foreground">{service.description}</p>
               </CardContent>
             </Card>
           ))}
